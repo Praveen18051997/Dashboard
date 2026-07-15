@@ -11,7 +11,7 @@ const FolderGrid = ({
 
       {/* Folder Section */}
 
-      <h2 className="mb-6 text-2xl font-bold text-gray-800 sm:text-3xl lg:mb-8 lg:text-5xl">
+      <h2 className="mb-6 text-xl font-semibold text-gray-800 sm:text-3xl lg:mb-8 lg:text-5xl">
         Folders
       </h2>
 

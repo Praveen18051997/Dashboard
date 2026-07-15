@@ -13,7 +13,7 @@ const FileSidebar = () => {
     useState(true);
 
   return (
-    <aside className="w-full border-b border-gray-200 bg-white md:w-72 xl:w-80 xl:border-b-0 xl:border-r">
+    <aside className="w-full border-b border-gray-200 bg-white md:w-62 xl:w-70 xl:border-b-0 xl:border-r">
 
       <div className="flex h-full flex-col">
 
