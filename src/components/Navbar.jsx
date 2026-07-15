@@ -7,7 +7,7 @@ import {
 } from "react-icons/fi";
 
 import defaultAvatar from "../assets/images/Avatar.png";
-import NotificationDropdown from "./NotificationDropdown";
+import NotificationDropdown from "./NotificationDropDown";
 import ProfileDropdown from "./ProfileDropDown";
 
 import { useSidebar } from "../context/SidebarContext";
