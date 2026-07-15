@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { FiX } from "react-icons/fi";
 
 const defaultAvatar =
@@ -12,25 +12,11 @@ const AddContactModal = ({
 }) => {
   const [formData, setFormData] = useState({
     name: "",
-    role: "Manager",
+    role: "",
     email: "",
     phone: "",
     image: defaultAvatar,
   });
-
-  useEffect(() => {
-    if (contact) {
-      setFormData(contact);
-    } else {
-      setFormData({
-        name: "",
-        role: "Manager",
-        email: "",
-        phone: "",
-        image: defaultAvatar,
-      });
-    }
-  }, [contact, open]);
 
   if (!open) return null;
 
@@ -54,6 +40,14 @@ const AddContactModal = ({
     onAdd({
       ...(contact || {}),
       ...formData,
+    });
+
+    setFormData({
+      name: "",
+      role: "",
+      email: "",
+      phone: "",
+      image: defaultAvatar,
     });
 
     onClose();

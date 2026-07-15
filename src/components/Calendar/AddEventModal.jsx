@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { FiX } from "react-icons/fi";
 
 const AddEventModal = ({
@@ -7,26 +7,17 @@ const AddEventModal = ({
   onAddEvent,
   calendarTypes,
 }) => {
-  const initialState = {
+
+  const [formData, setFormData] = useState({
     title: "",
     date: "",
     start: "",
     end: "",
     category: calendarTypes?.[0]?.name || "Meeting",
     color: "cyan",
-  };
+  });
 
-  const [formData, setFormData] =
-    useState(initialState);
-
-  useEffect(() => {
-    if (calendarTypes?.length) {
-      setFormData((prev) => ({
-        ...prev,
-        category: calendarTypes[0].name,
-      }));
-    }
-  }, [calendarTypes]);
+  
 
   if (!open) return null;
 

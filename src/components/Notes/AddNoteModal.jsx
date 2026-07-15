@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { FiX } from "react-icons/fi";
 
 const colors = [
@@ -37,22 +37,6 @@ const AddNoteModal = ({
     color: "yellow",
   });
 
-  useEffect(() => {
-    if (note) {
-      setFormData({
-        title: note.title,
-        description: note.description,
-        color: note.color,
-      });
-    } else {
-      setFormData({
-        title: "",
-        description: "",
-        color: "yellow",
-      });
-    }
-  }, [note, open]);
-
   if (!open) return null;
 
   const handleChange = (e) => {
@@ -88,6 +72,12 @@ const AddNoteModal = ({
       pinned: note?.pinned ?? false,
       date: note?.date || today,
     });
+
+    setFormData({
+      title: "",
+      description: "",
+      color: "yellow",
+      });
 
     onClose();
   };
