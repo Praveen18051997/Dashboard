@@ -54,10 +54,6 @@ const ProfileDropdown = ({ open }) => {
                 </p>
               </div>
             </div>
-
-            <span className="flex h-6 w-6 items-center justify-center rounded-xl bg-red-500 text-xs font-semibold text-white">
-              8
-            </span>
           </div>
 
           <div className="border-t border-gray-100"></div>

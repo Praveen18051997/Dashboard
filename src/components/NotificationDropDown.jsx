@@ -1,5 +1,4 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { FiX } from "react-icons/fi";
 import avatar from "../assets/images/Avatar.png";
 
 const notifications = [
@@ -12,7 +11,6 @@ const notifications = [
     id: 2,
     name: "Judith Black",
     time: "5 min ago",
-    active: true,
   },
   {
     id: 3,
@@ -95,13 +93,6 @@ const NotificationDropdown = ({ open }) => {
                     </p>
                   </div>
                 </div>
-
-                {/* Close icon */}
-                {item.active && (
-                  <button className="w-7 h-7 rounded-full bg-white shadow-sm flex items-center justify-center hover:bg-gray-200 transition">
-                    <FiX className="text-base text-gray-500" />
-                  </button>
-                )}
               </div>
             ))}
           </div>
