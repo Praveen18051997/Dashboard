@@ -43,13 +43,13 @@ const NotificationDropdown = ({ open }) => {
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: -15, scale: 0.96 }}
           transition={{ duration: 0.25 }}
-          className="absolute right-0 top-16 z-50
-                     w-[340px] max-w-[90vw]
+          className="absolute right-0 top-12 z-50
+                     w-64 max-w-[90vw]
                      bg-white rounded-3xl shadow-2xl
                      overflow-hidden border border-gray-100 overflow-hidden"
         >
           {/* Header */}
-          <div className="flex items-center justify-between px-5 py-4">
+          <div className="flex items-center justify-between px-5 py-3">
             <h2 className="text-xl font-semibold text-gray-900">
               Notifications
             </h2>
@@ -62,11 +62,11 @@ const NotificationDropdown = ({ open }) => {
           <div className="border-t border-gray-200"></div>
 
           {/* List */}
-          <div className="max-h-[520px] overflow-y-auto py-1">
+          <div className="max-h-[520px] overflow-y-auto py-0.5">
             {notifications.map((item) => (
               <div
                 key={item.id}
-                className={`mx-2 mb-1 rounded-2xl px-3 py-2.5 flex items-center justify-between transition ${
+                className={`mx-2 mb-1 rounded-2xl px-3 py-0.5 flex items-center justify-between transition ${
                   item.active ? "bg-gray-100" : "hover:bg-gray-50"
                 }`}
               >
@@ -79,7 +79,7 @@ const NotificationDropdown = ({ open }) => {
                       className="w-11 h-11 rounded-full object-cover"
                     />
 
-                    <span className="absolute bottom-0 right-0 w-3.5 h-2.5 rounded-full bg-green-400 border-2 border-white"></span>
+                    <span className="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-green-400 border-2 border-white"></span>
                   </div>
 
                   {/* Name */}

@@ -33,10 +33,10 @@ const ProfileDropdown = ({ open }) => {
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: -12, scale: 0.97 }}
           transition={{ duration: 0.22 }}
-          className="absolute right-0 top-16 z-50 w-[340px] max-w-[90vw] bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden"
+          className="absolute right-0 top-12 z-50 w-64 max-w-[90vw] bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden"
         >
           {/* Header */}
-          <div className="flex items-center justify-between px-5 py-4">
+          <div className="flex items-center justify-between px-5 py-2">
             <div className="flex items-center gap-4">
               <img
                 src={avatar}
@@ -59,7 +59,7 @@ const ProfileDropdown = ({ open }) => {
           <div className="border-t border-gray-100"></div>
 
           {/* Menu */}
-          <div className="space-y-1 px-3 py-2.5">
+          <div className="space-y-1 px-4 py-0.5">
 
             <button
               onClick={() => navigate("/profile")}
@@ -93,9 +93,9 @@ const ProfileDropdown = ({ open }) => {
           <div className="border-t border-gray-100"></div>
 
           {/* Settings */}
-          <div className="px-4 py-4">
+          <div className="px-4 py-0.5">
 
-            <button className="flex w-full items-center gap-5 rounded-2xl bg-gray-100 px-5 py-4">
+            <button className="flex w-full items-center gap-5 rounded-2xl px-3 py-4">
               <FiSettings className="text-2xl text-gray-700" />
 
               <span className="text-lg font-medium text-gray-700">
@@ -103,7 +103,7 @@ const ProfileDropdown = ({ open }) => {
               </span>
             </button>
 
-            <button className="mt-2 flex w-full items-center gap-5 rounded-2xl px-5 py-4 hover:bg-gray-50 transition">
+            <button className="mt-2 flex w-full items-center gap-5 rounded-2xl px-4 py-0.5 hover:bg-gray-50 transition">
               <FiLock className="text-2xl text-gray-500" />
 
               <span className="text-lg font-medium text-gray-700">
@@ -116,7 +116,7 @@ const ProfileDropdown = ({ open }) => {
           <div className="border-t border-gray-100"></div>
 
           {/* Logout */}
-          <div className="px-6 py-4">
+          <div className="px-4 py-0.5">
 
             <button
               onClick={handleLogout}
